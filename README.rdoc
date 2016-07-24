@@ -1,28 +1,18 @@
-== README
+== eccearts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Beep Boop. This is a website!
 
-Things you may want to cover:
+Tech:
+* Rails 4.2 for meow
+* Devise for security
+* Bootstrap for styling
+* Postgres for db
 
-* Ruby version
+Goals:
+* blog
+* admin portal
+* users platform
 
-* System dependencies
+Ecce is a community of culturally and socially engaged creative and performing artists. Core to its mission is collaboration with creative thinkers across disciplines: science, technology and social justice.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+At the heart of our community is a group of our generation’s most accomplished performers who are committed to presenting music, theater and interdisciplinary art in a captivating and visionary way. By engaging science, technology and a full range of artistic media, Ecce seeks to create experiences that inspire new thinking and social change.
