@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  get 'home/index'
+  # devise_for :admins
+  devise_for :admins, path: 'admins', skip: :registrations
+  resources :admins, only: [:show]
 
+  # get 'home/index'
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
