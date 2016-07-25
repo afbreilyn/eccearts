@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   devise_for :admins, path: 'admins', skip: :registrations
   resources :admins, only: [:show]
 
+  namespace :admin do
+    resources :projects, except: [:show]
+  end
+
+  resources :projects, only: [:index]
+
   # get 'home/index'
   root 'home#index'
 

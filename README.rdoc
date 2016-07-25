@@ -12,6 +12,7 @@ Goals:
 * blog
 * admin portal
 * users platform
+* donors portal
 
 Ecce is a community of culturally and socially engaged creative and performing artists. Core to its mission is collaboration with creative thinkers across disciplines: science, technology and social justice.
 
