@@ -17,6 +17,8 @@ gem 'devise', '~> 3.4.0'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
+gem "figaro"
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'
