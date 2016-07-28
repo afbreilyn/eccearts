@@ -7,6 +7,8 @@ Tech:
 * Devise for security
 * Bootstrap for styling
 * Postgres for db
+* Carrierwave and Cloudinary for pics
+* Heroku for hosting
 
 Goals:
 * blog
