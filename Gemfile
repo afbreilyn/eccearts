@@ -18,6 +18,8 @@ gem 'formtastic'
 gem 'formtastic-bootstrap'
 
 gem "figaro"
+gem 'carrierwave'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'byebug'

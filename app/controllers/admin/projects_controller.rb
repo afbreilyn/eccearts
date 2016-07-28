@@ -45,7 +45,10 @@ class Admin::ProjectsController < Admin::BaseController
         :title,
         :sub_title,
         :description,
-        :cost
+        :cost,
+        :avatar,
+        :avatar_cache,
+        :remove_avatar
       )
     end
 end

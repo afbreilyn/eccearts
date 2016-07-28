@@ -1,6 +1,11 @@
 <div class="row">
   <%= project.title %>
 </div>
+<div class="row">
+  <% unless project.avatar_url.nil? %>
+    <%= image_tag project.avatar_url, class: '', style: 'width: 100px' %>
+  <% end %>
+</div>
 <div class="row text-right">
   <%= link_to "Edit Project", edit_admin_project_path(project) %>
 </div>
