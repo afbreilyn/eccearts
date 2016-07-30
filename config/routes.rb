@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # devise_for :admins
   devise_for :admins, path: 'admins', skip: :registrations
   resources :admins, only: [:show]
+  get '/admin' => 'admins#admin_home'
 
   namespace :admin do
     resources :projects, except: [:show]

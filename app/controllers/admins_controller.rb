@@ -6,4 +6,8 @@ class AdminsController < ApplicationController
     @admin = Admin.find(params[:id])
   end
 
+  def admin_home
+    redirect_to action: "show", id: current_admin.id
+  end
+
 end
