@@ -16,6 +16,7 @@ gem 'devise', '~> 3.4.0'
 
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'font-awesome-sass'
 
 gem "figaro"
 gem 'carrierwave'
