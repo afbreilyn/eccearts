@@ -16,7 +16,11 @@
 
 /*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
 @import "*";
+@import "colours";
 @import "forms";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "formtastic-bootstrap";
+@import "fonts";
+@import "footer";
+@import "general";
