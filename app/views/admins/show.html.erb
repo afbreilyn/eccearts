@@ -1,12 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-      this is the admin show page
+      welcome to the admin portal <%= current_admin.name %>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-      <%= current_admin.name %>
+      here are the things to do (thus far):
+    </div>  
+  </div>
+
+  <div className="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
+      <ul>
+        <li>
+          <%= link_to "see all projects", projects_path %>
+        </li>
+        <li>
+          <%= link_to "create a project", new_admin_project_path %>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
