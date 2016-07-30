@@ -2,4 +2,23 @@
   <p class="navbar-text pull-left">
     © 2016 ECCE ENSEMBLE || made by afb
   </p>
+
+  <div id="top-link-block" class="hidden pull-right">
+    <a href="#top" class="" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+      <!-- <i class="glyphicon glyphicon-chevron-up"></i> Back to Top -->
+      <%= icon('chevron-up')%>
+      Back to Top
+    </a>
+  </div>
+
 </div>
+
+
+<script>
+if ( ($(window).height() + 100) < $(document).height() ) {
+  $('#top-link-block').removeClass('hidden').affix({
+    // how far to scroll down before link "slides" into view
+    offset: {top:100}
+  });
+}
+</script>
