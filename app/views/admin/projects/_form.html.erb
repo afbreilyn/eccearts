@@ -1,47 +1,15 @@
-<!-- <div class="container">
-  <%= semantic_form_for [:admin, @project], :html => { :multipart => true } do |f| %>
-    <%#= f.inputs %>
-    <%#= f.file_field :avatar %>
-    <%= f.inputs do %>
-      <%= f.input :title %>
-      <%= f.input :sub_title %>
-      <%= f.input :description %>
-      <%= f.input :cost %>
-      <%#= f.input :avatar, :as => :file, :hint => f.object.avatar.present? \
-      ? tag("img", src: f.object.avatar)
-        : content_tag(:span, "no avatar yet") %>
-      <%= f.label :avatar do %>
-        <%= f.input :avatar, :as => :file, :hint => f.object.avatar_cache.present? \
-          ? tag("img", src: f.object.avatar_cache)
-          : content_tag(:span, "no avatar yet") %>
-        <%= f.hidden_field :avatar_cache %>
-        <%= f.object.avatar_cache.present? %>
-      <% end %>
-    <% end %>
-    <%= f.actions %>
-  <% end %>
-</div>
- -->
 
 <%= semantic_form_for [:admin, @project], :html => { :multipart => true } do |f| %>
   <%= f.inputs %>
     <div class="form-group">
       <img id="img_prev" width=300 height=300 src="#" alt="your image" class="img-thumbnail hidden"/> <br/>
-      <span class="btn btn-default btn-file">
-        Upload Avatar Image
-        <%= f.file_field :avatar, id: "avatar-upload" %>
-      </span>
       <%= f.hidden_field :avatar_cache %>
     </div>
   <%= f.actions %>
 <% end %>
 
 <script> 
-  /*
-    stolen from: http://spencerdixon.com/blog/image-preview-with-carrierwave-and-rails.html
-    
-    thanks! :)
-  */
+  /* stolen from: http://spencerdixon.com/blog/image-preview-with-carrierwave-and-rails.html ~ thanks! :) */
   $(function() {
     function readURL(input) {
       if (input.files && input.files[0]) {
@@ -54,7 +22,7 @@
       }
     }
 
-    $("#avatar-upload").change(function(){
+    $("#project_avatar").change(function(){
       $('#img_prev').removeClass('hidden');
       readURL(this);
     });
