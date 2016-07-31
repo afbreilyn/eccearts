@@ -22,13 +22,22 @@ html {
   font-size: 0.85rem;
 }
 
+/* clear defaults */
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
 /* Type will scale with modules */
 h1 {
   font-size: 3em;
+  color: $black;
 }
 
 h2 {
   font-size: 2em;
+  color: $dark-grey;
 }
 
 p {

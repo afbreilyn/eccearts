@@ -3,4 +3,21 @@
 
 body {
   background-color: $light-grey;
+  padding-bottom: 80px;
+}
+
+.project-show-row {
+  padding-top: 50px;
+}
+
+/* seriously - how is this now a class in bootstrap? */
+
+
+.text-center-xs {
+  @media (min-width: 769px) {
+    text-align: inherit;
+  };
+  @media (max-width: 768px) {
+    text-align: center;
+  };
 }

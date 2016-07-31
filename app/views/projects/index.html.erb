@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-    <h1>projects#index</h1>
-    <% @projects.each do |project| %>
-      <%= render 'show', project: project%>
+    <% @projects.order(:id).each_with_index do |project, idx| %>
+      <% if idx % 2 == 0 %>
+        <%= render 'show', project: project %>
+      <% else %>
+        <%= render 'show_right', project: project %>
+      <% end %>
     <% end %>
   </div>
 </div>
