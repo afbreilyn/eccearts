@@ -31,13 +31,15 @@ h1, h2, h3, p {
 
 /* Type will scale with modules */
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   color: $black;
+  padding-bottom: 5px;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1em;
   color: $dark-grey;
+  padding-bottom: 5px;
 }
 
 p {

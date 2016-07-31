@@ -1,16 +1,16 @@
 <div class="row project-show-row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-    <div>
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="project-show-panel">
       <div class="row">
         <!-- hidden img for modile -->
-        <div class="col-xs-8 col-xs-offset-2 hidden-sm hidden-md hidden-lg">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
           <% unless project.avatar_url.nil? %>
-            <%= image_tag project.avatar_url, class: '', style: 'width: 100%' %>
+            <%= image_tag project.avatar_url, class: 'project-img' %>
           <% end %>
         </div>
 
         <!-- description -->
-        <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-md-7 col-lg-7 text-right">
+        <div class="col-xs-12 col-sm-7 col-sm-offset-0 col-md-7 col-lg-7 text-right">
           <!-- title -->
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center-xs">
@@ -46,9 +46,9 @@
         </div>
 
         <!-- img for tablet + -->
-        <div class="hidden-xs col-sm-5 col-sm-offset-0 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1">
+        <div class="hidden-xs col-sm-5 col-sm-offset-0 col-md-4 col-lg-4">
           <% unless project.avatar_url.nil? %>
-            <%= image_tag project.avatar_url, class: '', style: 'width: 100%' %>
+            <%= image_tag project.avatar_url, class: 'project-img' %>
           <% end %>
         </div>
 

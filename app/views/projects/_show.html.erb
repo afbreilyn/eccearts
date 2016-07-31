@@ -1,13 +1,13 @@
 <div class="row project-show-row">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div>
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="project-show-panel">
       <div class="row">
         <div class="col-xs-12 col-sm-5 col-sm-offset-0 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
           <% unless project.avatar_url.nil? %>
-            <%= image_tag project.avatar_url, class: '', style: 'width: 100%' %>
+            <%= image_tag project.avatar_url, class: 'project-img' %>
           <% end %>
         </div>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-md-6 col-lg-6">
+        <div class="col-xs-12 col-sm-7 col-sm-offset-0 col-md-6 col-lg-6">
           <!-- title -->
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center-xs">
@@ -18,7 +18,7 @@
           </div>
           <!-- sub title -->
           <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center-xs">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12 text-center-xs">
               <h2>
                 <%= project.sub_title %>
               </h2>
@@ -26,7 +26,7 @@
           </div>
           <!-- description -->
           <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center-xs">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12 text-center-xs">
               <p>
                 <%= simple_format project.description %>
               </p>
@@ -34,7 +34,7 @@
           </div>
           <!-- give button -->
           <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center-xs">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12 text-center-xs">
               <p>
                 <%#= project.cost %>
               </p>
