@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :projects, only: [:index]
+  get '/donors' => 'projects#index'
 
   # get 'home/index'
   root 'home#index'
