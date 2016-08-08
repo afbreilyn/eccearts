@@ -1,44 +1,46 @@
-<div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12 text-center">
-    <h1>
-      Our 2016-17 Season: Conservation
-    </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12 text-center">
+      <h1>
+        Our 2016-17 Season: Conservation
+      </h1>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-    <br />
-    <p>
-      Recognizing that music and the arts play a critical role in shaping cultural discourse, ECCE will bring together performances, exhibitions and a series of discussions on the topic of conservation. 
-    </p>
-    <br />
-    <p>
-      Three season-long collaborations will focus on synergies between artistic creativity and technological innovations. We aim to produce new collaborations between artists, musicians and scientists and bring important minds together, setting the stage for advancing the public dialogue around conservation. 
-    </p>
-    <br />
-    <p>
-      Collaboration with the Rose Kennedy Greenway & Ai Weiwei's Circle of Animals/Zodiac Heads.
-      Residency / Collaboration with the Atlantic Center for the Arts.
-      Collaboration with the Boston Athenaeum. Conservation Summit.
-    </p>
-    <br />
-    <p>
-      In addition, ECCE will showcase the music of Yehudi Wyner and premiere a new opera by Jonathan Dawe. 
-    </p>
-    <br />
-    <p>
-      ECCE will conclude its season with a summit at the Boston Athenaeum on music, art and social justice. 
-    </p>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+      <br />
+      <p>
+        Recognizing that music and the arts play a critical role in shaping cultural discourse, ECCE will bring together performances, exhibitions and a series of discussions on the topic of conservation. 
+      </p>
+      <br />
+      <p>
+        Three season-long collaborations will focus on synergies between artistic creativity and technological innovations. We aim to produce new collaborations between artists, musicians and scientists and bring important minds together, setting the stage for advancing the public dialogue around conservation. 
+      </p>
+      <br />
+      <p>
+        Collaboration with the Rose Kennedy Greenway & Ai Weiwei's Circle of Animals/Zodiac Heads.
+        Residency / Collaboration with the Atlantic Center for the Arts.
+        Collaboration with the Boston Athenaeum. Conservation Summit.
+      </p>
+      <br />
+      <p>
+        In addition, ECCE will showcase the music of Yehudi Wyner and premiere a new opera by Jonathan Dawe. 
+      </p>
+      <br />
+      <p>
+        ECCE will conclude its season with a summit at the Boston Athenaeum on music, art and social justice. 
+      </p>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-    <% @projects.order(:id).each_with_index do |project, idx| %>
-      <% if idx % 2 == 0 %>
-        <%= render 'show', project: project %>
-      <% else %>
-        <%= render 'show_right', project: project %>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
+      <% @projects.order(:id).each_with_index do |project, idx| %>
+        <% if idx % 2 == 0 %>
+          <%= render 'show', project: project %>
+        <% else %>
+          <%= render 'show_right', project: project %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

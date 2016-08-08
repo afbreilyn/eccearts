@@ -11,7 +11,12 @@ Rails.application.routes.draw do
   resources :projects, only: [:index]
   get '/donors' => 'projects#index'
 
-  # get 'home/index'
+  # static pages
+  get '/about' => 'home#about'
+  get '/ensemble' => 'home#ensemble'
+  get '/community'=> 'home#community'
+
+
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

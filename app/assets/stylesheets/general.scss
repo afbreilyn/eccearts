@@ -33,3 +33,21 @@ body {
   padding-top: 8px;
   padding-bottom: 10px;
 }
+
+.homebackground {
+  background-image: asset_url("ECCE-background.jpg");
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 130px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position-y: -300px;
+}
+
+.floating-whiteness {
+  background: rgba(255,255,255,.7);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

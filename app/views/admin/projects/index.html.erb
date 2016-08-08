@@ -1,9 +1,11 @@
-<div class="row">
-  admin project index
+<div class="container">
+  <div class="row">
+    admin project index
+  </div>
+  <div class="row">
+    <%= link_to "make new project", new_admin_project_path %>  
+  </div>
+  <% @projects.each do |project| %>
+    <%= render 'show', project: project %>
+  <% end %>
 </div>
-<div class="row">
-  <%= link_to "make new project", new_admin_project_path %>  
-</div>
-<% @projects.each do |project| %>
-  <%= render 'show', project: project %>
-<% end %>

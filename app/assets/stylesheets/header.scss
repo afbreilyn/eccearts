@@ -3,3 +3,30 @@
 .navbar-brand {
   padding: 0;
 }
+
+.navbar.navbar-default.navbar-static-top {
+  margin-bottom: 0px;
+  border-bottom: 1px solid $blue;
+}
+
+.nav.navbar-nav > li > a {
+  color: $dark-grey;
+  padding-bottom: 12px;
+}
+
+.nav.navbar-nav > li > a:hover {
+  color: $blue;
+}
+
+.nav.navbar-nav > li {
+  border-bottom: 3px solid transparent;
+
+}
+
+.nav.navbar-nav > li:hover {
+  border-color: $blue;
+}
+
+.nav.navbar-nav > li.afb-active {
+  border-color: $blue;
+}
