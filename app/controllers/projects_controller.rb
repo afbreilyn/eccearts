@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
 
-  def index
+  def all
     @projects = Project.all
+    render 'projects/index'
   end
 
 end
