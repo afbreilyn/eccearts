@@ -17,7 +17,6 @@ class Admin::ProjectsController < Admin::BaseController
 
   def index
     @projects = Project.all
-    debugger
   end
 
   def edit
