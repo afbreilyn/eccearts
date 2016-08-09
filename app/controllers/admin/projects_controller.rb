@@ -7,6 +7,8 @@ class Admin::ProjectsController < Admin::BaseController
 
     @projects = Project.all
     @x = "meowmeowmeowmeowmeowmeow"
+    asdfasdf
+    asdfasdf
   end
 
   def new
