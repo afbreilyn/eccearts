@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     resources :projects, except: [:show]
   end
 
-  resources :projects, only: [:all]
+  resources :projects, only: [:index]
+  
   get '/donors' => 'projects#index'
 
   # static pages
