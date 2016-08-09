@@ -4,7 +4,7 @@ class Admin::ProjectsController < Admin::BaseController
 
 
   def index
-
+    debugger
     @projects = Project.all
     @x = "meowmeowmeowmeowmeowmeow"
     asdfasdf
