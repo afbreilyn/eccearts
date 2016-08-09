@@ -1,5 +1,7 @@
 class Admin::ProjectsController < Admin::BaseController
 
+  before_action :authenticate_admin!
+
   def new
     @project = Project.new
   end
