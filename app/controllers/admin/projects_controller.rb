@@ -2,6 +2,13 @@ class Admin::ProjectsController < Admin::BaseController
 
   before_action :authenticate_admin!
 
+
+  def index
+
+    @projects = Project.all
+    @x = "meowmeowmeowmeowmeowmeow"
+  end
+
   def new
     @project = Project.new
   end
@@ -15,9 +22,6 @@ class Admin::ProjectsController < Admin::BaseController
     end
   end
 
-  def index
-    @projects = Project.all
-  end
 
   def edit
     @project = Project.find(params[:id])
