@@ -16,16 +16,9 @@ class Admin::ProjectsController < Admin::BaseController
   end
 
   def index
-    @projects = Project.allf/
 
-  asdfjlksadfkjlsfda;lafsd
-   asdfjlksadfkjlsfda asdfjlksadfkjlsfda 
+    render 'home/about'
 
-
-   asdjklafsdklf 
-   asdfjklasdf 
-   sadfjksadfk
-   
   end
 
   def edit
