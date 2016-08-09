@@ -5,7 +5,9 @@
   <div class="row">
     <%= link_to "make new project", new_admin_project_path %>  
   </div>
-  <% @projects.each do |project| %>
-    <%= render 'show', project: project %>
+  <% if @projects.length > 0 %>
+    <% @projects.each do |project| %>
+      <%= render 'show', project: project %>
+    <% end %>
   <% end %>
 </div>
