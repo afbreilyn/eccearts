@@ -16,7 +16,16 @@ class Admin::ProjectsController < Admin::BaseController
   end
 
   def index
-    @projects = Project.all
+    @projects = Project.allf/
+
+  asdfjlksadfkjlsfda;lafsd
+   asdfjlksadfkjlsfda asdfjlksadfkjlsfda 
+
+
+   asdjklafsdklf 
+   asdfjklasdf 
+   sadfjksadfk
+   
   end
 
   def edit
