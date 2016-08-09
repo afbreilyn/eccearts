@@ -1,6 +1,8 @@
 @import "colours";
 
 
+html,body { height:100%; }
+
 body {
   background-color: $light-grey;
   padding-bottom: 80px;
@@ -51,3 +53,15 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.main-blurb-container {
+  background: white;
+  height: calc(100% - 230px);
+}
+
+.projects-container {
+  background: white;
+  padding-bottom: 50px;
+  margin-bottom: 65px;
+}
+
