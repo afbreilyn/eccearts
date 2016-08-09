@@ -6,6 +6,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '37e33fad6f285ec0f4d6de0b8cb1f8e78def55d7893dc9effa37ea9c7963b7ecfd19a6645451740fee8cafc609862e2d9357495aa76df632d700dea5050a4742'
 
+  config.secret_key = Figaro.env.devise_secret_key if Rails.env.production?
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
