@@ -39,3 +39,5 @@ group :production do
   gem 'newrelic_rpm'  
   gem 'rails_12factor' # error feedback
 end
+
+ruby '2.1.1'
