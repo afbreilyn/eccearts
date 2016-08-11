@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   database: EcceArts_production
-  username: EcceArts
+  username: afb
   password: <%= ENV['ECCEARTS_DATABASE_PASSWORD'] %>
 
