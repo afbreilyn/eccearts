@@ -34,7 +34,7 @@ class Admin::ProjectsController < Admin::BaseController
 
   def destroy
     @project = Project.find(params[:id])
-    if @vendor.destroy
+    if @project.destroy
       flash[:notice] = t('success', obj: 'meow meow', past_participle: 'deleted')
     end
     redirect_to admin_projects_path

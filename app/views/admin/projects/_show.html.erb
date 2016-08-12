@@ -1,11 +1,24 @@
 <div class="row">
-  <%= project.title %>
-</div>
-<div class="row">
-  <% unless project.avatar_url.nil? %>
-    <%= image_tag project.avatar_url, class: '', style: 'width: 100px' %>
-  <% end %>
-</div>
-<div class="row text-right">
-  <%= link_to "Edit Project", edit_admin_project_path(project) %>
+  <div class="col-xs-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <%= project.title %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <% unless project.avatar_url.nil? %>
+          <%= image_tag project.avatar_url, class: '', style: 'width: 100px' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <%= link_to "Edit Project", edit_admin_project_path(project), class: 'btn btn-primary' %>
+          <% if current_admin.god_mode? %>
+            <%= link_to "Delete Project", admin_project_path(project), method: 'delete', class: 'btn btn-danger' %>
+          <% else %>
+            
+          <% end %>
+      </div>
+    </div>
+  </div>
 </div>
