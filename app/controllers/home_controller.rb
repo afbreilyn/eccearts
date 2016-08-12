@@ -5,9 +5,6 @@ class HomeController < ApplicationController
   def about
   end
 
-  def ensemble
-  end
-
   def community
   end
   

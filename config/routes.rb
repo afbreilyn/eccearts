@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # devise_for :admins
   namespace :admin do
     resources :projects, except: [:show]
@@ -11,13 +12,14 @@ Rails.application.routes.draw do
   get '/admin' => 'admins#admin_home'
 
   resources :projects, only: [:index]
+  resources :users, only: [:ensemble]
 
   get '/donors' => 'projects#index'
 
   # static pages
   get '/about' => 'home#about'
-  get '/ensemble' => 'home#ensemble'
   get '/community'=> 'home#community'
+  get '/ensemble'=> 'users#ensemble'
 
 
   root 'home#index'
