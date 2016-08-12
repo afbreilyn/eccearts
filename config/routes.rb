@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   # devise_for :admins
   namespace :admin do
     resources :projects, except: [:show]
+    post '/projects/hide-project/:id' => 'projects#hide_project', as: :hide_project
   end
 
   devise_for :admins, path: 'admins', skip: :registrations
   resources :admins, only: [:show]
   
-
   get '/admin' => 'admins#admin_home'
 
   resources :projects, only: [:index]

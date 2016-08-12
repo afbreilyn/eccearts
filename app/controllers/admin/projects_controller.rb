@@ -35,8 +35,14 @@ class Admin::ProjectsController < Admin::BaseController
   def destroy
     @project = Project.find(params[:id])
     if @project.destroy
-      flash[:notice] = t('success', obj: 'meow meow', past_participle: 'deleted')
+      # flash[:notice] = t('success', obj: 'meow meow', past_participle: 'deleted')
     end
+    redirect_to admin_projects_path
+  end
+
+  def hide_project
+    @project = Project.find(params[:id])
+    @project.update_attributes({ hidden: !@project.hidden })
     redirect_to admin_projects_path
   end
 
@@ -50,7 +56,8 @@ class Admin::ProjectsController < Admin::BaseController
         :cost,
         :avatar,
         :avatar_cache,
-        :remove_avatar
+        :remove_avatar,
+        :hidden
       )
     end
 end
