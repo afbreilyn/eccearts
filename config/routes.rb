@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :projects, except: [:show]
     post '/projects/hide-project/:id' => 'projects#hide_project', as: :hide_project
+    resources :users, except: [:show]
+    post '/users/hide-project/:id' => 'users#hide_project', as: :hide_user
   end
 
   devise_for :admins, path: 'admins', skip: :registrations
