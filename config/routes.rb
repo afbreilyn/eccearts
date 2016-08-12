@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     resources :projects, except: [:show]
     post '/projects/hide-project/:id' => 'projects#hide_project', as: :hide_project
     resources :users, except: [:show]
-    post '/users/hide-project/:id' => 'users#hide_project', as: :hide_user
+    get '/ensemble-members' => 'users#ensemble', as: :ensemble
+    post '/users/hide-ensemble-memeber/:id' => 'users#hide_ensemble_member', as: :hide_ensemble_member
   end
 
   devise_for :admins, path: 'admins', skip: :registrations

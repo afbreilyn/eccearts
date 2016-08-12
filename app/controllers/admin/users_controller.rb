@@ -3,11 +3,11 @@ class Admin::UsersController < Admin::BaseController
   # before_action :authenticate_admin!
 
   def new
-    @eser = User.new
+    @user = User.new
   end
 
   def create
-    @eser = User.new(user_params)
+    @user = User.new(user_params)
     if @user.save
       redirect_to admin_users_path
     else
@@ -17,6 +17,10 @@ class Admin::UsersController < Admin::BaseController
 
   def index
     @users = User.all
+  end
+
+  def ensemble
+    @members = User.all.where(ensemble_member: true) 
   end
 
   def edit
@@ -46,18 +50,25 @@ class Admin::UsersController < Admin::BaseController
     redirect_to admin_users_path
   end
 
+  def hide_ensemble_member
+    @user = User.find(params[:id])
+    @user.update_attributes({ hidden: !@user.hidden })
+    redirect_to admin_ensemble_path
+  end
+
   protected
 
-    def User_params
+    def user_params
       params.require(:user).permit(
-        :title,
-        :sub_title,
-        :description,
-        :cost,
+        :name,
+        :email,
+        :password,
+        :bio,
         :avatar,
         :avatar_cache,
-        :remove_avatar,
-        :hidden
+        :ensemble_member,
+        :role,
+        :personal_website
       )
     end
 end

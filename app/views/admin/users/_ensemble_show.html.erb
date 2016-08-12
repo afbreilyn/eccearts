@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <h1>
+          <%= member.name %>
+        </h1>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <h3>
+          <%= member.email %>
+        </h3>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <p>
+          <%= simple_format member.bio %>
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <p>
+          <%= member.role %>
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <p>
+          <%= member.personal_website %>
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <% unless member.avatar_url.nil? %>
+          <%= image_tag member.avatar_url, class: '', style: 'width: 100px' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <%= link_to "Edit User", edit_admin_user_path(member), class: 'btn btn-primary' %>
+          <% if current_admin.god_mode? %>
+
+            <%= link_to "Delete Member", admin_user_path(member), method: 'delete', class: 'btn btn-danger' %>
+            <% if member.hidden %>
+              <%= link_to "UnHide Member", admin_hide_ensemble_member_path(member), method: 'post', class: 'btn btn-warning' %>
+            <% else %>
+              <%= link_to "Hide Member", admin_hide_ensemble_member_path(member), method: 'post', class: 'btn btn-warning' %>
+            <% end %>
+          <% else %>
+            <!-- regular admins can't be trusted to not-delete important things -->
+            <%= link_to "Delete Member", admin_hide_ensemble_member_path(member), method: 'post', class: 'btn btn-danger' %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

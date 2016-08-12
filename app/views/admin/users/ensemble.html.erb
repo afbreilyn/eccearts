@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    admin ensemble list
+  <div class="row">
+    <%= link_to "add and ensemble member", new_admin_user_path %>  
+  </div>
+  <% if !current_admin.god_mode? then @members = @members.where(hidden: false) end %>
+  <% @members.each do |member| %>
+    <%= render 'ensemble_show', member: member %>
+  <% end %>
+</div>

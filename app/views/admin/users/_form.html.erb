@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @user] do |f| %>
+  <%#= f.inputs do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <%= f.input :bio %>
+    <%= f.hidden_field :ensemble_member, value: true %>
+    <%= f.input :role %>
+    <%= f.input :personal_website %>
+
+  <%#= f.actions %>
+  <%= f.action :submit, :button_html => {class: "btn btn-submit"} %>
+<% end %>
+
