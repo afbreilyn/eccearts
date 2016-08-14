@@ -22,6 +22,9 @@ gem "figaro"
 gem 'carrierwave'
 gem 'cloudinary'
 
+gem 'ranked-model'
+gem 'jquery-ui-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'

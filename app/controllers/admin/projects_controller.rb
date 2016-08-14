@@ -16,7 +16,8 @@ class Admin::ProjectsController < Admin::BaseController
   end
 
   def index
-    @projects = Project.all
+    # @projects = Project.all
+    @projects = Project.rank(:row_order).all
   end
 
   def edit
@@ -46,6 +47,14 @@ class Admin::ProjectsController < Admin::BaseController
     redirect_to admin_projects_path
   end
 
+  def update_row_order
+    @project = Project.find(project_params[:project_id])
+    @project.row_order = project_params[:row_order]
+    @project.save!
+
+    render nothing: true # this is a POST action, updates sent via AJAX, no view rendered
+  end
+
   protected
 
     def project_params
@@ -57,7 +66,16 @@ class Admin::ProjectsController < Admin::BaseController
         :avatar,
         :avatar_cache,
         :remove_avatar,
-        :hidden
+        :hidden,
+        :row_order,
+        :project_id
       )
     end
+
+    private
+
+      # Use callbacks to share common setup or constraints between actions.
+      def set_project
+        @project = Project.find(params[:id])
+      end
 end
