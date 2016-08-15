@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     resources :users, except: [:show]
     get '/ensemble-members' => 'users#ensemble', as: :ensemble
     post '/users/hide-ensemble-memeber/:id' => 'users#hide_ensemble_member', as: :hide_ensemble_member
+
+    resources :items, except: [:show]
+    post '/itmes/hide-item/:id' => 'items#hide_item', as: :hide_item
+    resources :items do
+      post :update_row_order, on: :collection
+    end
   end
 
   devise_for :admins, path: 'admins', skip: :registrations
@@ -24,6 +30,8 @@ Rails.application.routes.draw do
   resources :users, only: [:ensemble]
 
   get '/donors' => 'projects#index'
+
+  resources :items, only: [:index]
 
   # static pages
   get '/about' => 'home#about'

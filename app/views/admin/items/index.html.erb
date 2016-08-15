@@ -1,0 +1,76 @@
+<div class="container  p-b-60px">
+  <div class="row">
+    admin item index
+  </div>
+  <div class="row">
+    <%= link_to "add a donation item", new_admin_item_path %>  
+  </div>
+  <br />
+  <br />
+  <%# if !current_admin.god_mode? then @members = @members.where(hidden: false) end %>
+  <%# @items.each do |item| %>
+    <%#= render 'show', item: item %>
+  <%# end %>
+
+
+<table class="table table-bordered table-striped" id="item-sortable">    
+<!--       <col style="width:25%">
+      <col style="width:15%">
+      <col style="width:35%">
+      <col style="width:5%">
+      <col style="width:15%">
+      <col style="width:5%"> -->
+      <thead>
+        <tr>
+          <th>
+            Title
+          </th>
+          <th class="hidden-xs">
+            Description
+          </th>
+          <th class="hidden-xs">
+            button
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @items.each do |item| %>
+          <tr data-item-id=<%= "#{item.id}" %> class="item">
+            <td>
+              <%= item.title %>
+            </td>
+            <td class="">
+              <%= simple_format item.description %>
+            </td>
+            <td class="">
+              <%= simple_format item.donate_button %>
+            </td>
+            <td>
+              <%= link_to "Edit Project", edit_admin_item_path(item), class: 'btn btn-primary' %>
+              <% if current_admin.god_mode? %>
+
+                <%= link_to "Delete Project", admin_item_path(item), method: 'delete', class: 'btn btn-danger' %>
+                <% if item.hidden %>
+                  <%= link_to "UnHide Item", admin_hide_item_path(item), method: 'post', class: 'btn btn-warning' %>
+                <% else %>
+                  <%= link_to "Hide Item", admin_hide_item_path(item), method: 'post', class: 'btn btn-warning' %>
+                <% end %>
+              <% else %>
+                <!-- regular admins can't be trusted to not-delete important things -->
+                <%= link_to "Delete Item", admin_hide_item_path(item), method: 'post', class: 'btn btn-danger' %>
+              <% end %>
+            </td>
+            <!--
+            <td>
+              <%#= link_to 'show', thing_path(thing), :class => 'btn btn-default pull-right' %>
+              <%#= project.row_order %>
+            </td>
+            -->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+</div>

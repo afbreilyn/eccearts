@@ -12,82 +12,78 @@
   <%# end %>
 
   <div class="row">
- <!--    <div class="hidden-sm hidden-md hidden-lg">
-    </div>
-    <div class="hidden-xs">
- -->      <table class="table table-bordered table-striped" id="sortable">      
-        <col style="width:25%">
-        <col style="width:15%">
-        <col style="width:35%">
-        <col style="width:5%">
-        <col style="width:15%">
-        <col style="width:5%">
-        <thead>
-          <tr>
-            <th>
-              Title
-            </th>
-            <th class="hidden-xs">
-              Sub title
-            </th>
-            <th class="hidden-xs">
-              Description
-            </th>
-            <th class="hidden-xs">
-              cost
-            </th>
-            <th class="hidden-xs">
-              image
-            </th>
-            <th>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @projects.each do |project| %>
-            <tr data-item-id=<%= "#{project.id}" %> class="item">
-              <td>
-                <%= project.title %>
-              </td>
-              <td class="hidden-xs">
-                <%= project.sub_title %>
-              </td>
-              <td class="hidden-xs">
-                <%= simple_format project.description %>
-              </td>
-              <td class="hidden-xs">
-                <%= project.cost %>
-              </td>
-              <td class="hidden-xs">
-                <% unless project.avatar_url.nil? %>
-                  <%= image_tag project.avatar_url, class: '', style: 'width: 100px' %>
-                <% end %>
-              </td>
-              <td>
-              <%= link_to "Edit Project", edit_admin_project_path(project), class: 'btn btn-primary' %>
-              <% if current_admin.god_mode? %>
-
-                <%= link_to "Delete Project", admin_project_path(project), method: 'delete', class: 'btn btn-danger' %>
-                <% if project.hidden %>
-                  <%= link_to "UnHide Project", admin_hide_project_path(project), method: 'post', class: 'btn btn-warning' %>
-                <% else %>
-                  <%= link_to "Hide Project", admin_hide_project_path(project), method: 'post', class: 'btn btn-warning' %>
-                <% end %>
-              <% else %>
-                <!-- regular admins can't be trusted to not-delete important things -->
-                <%= link_to "Delete Project", admin_hide_project_path(project), method: 'post', class: 'btn btn-danger' %>
+    <table class="table table-bordered table-striped" id="sortable">    
+      <col style="width:25%">
+      <col style="width:15%">
+      <col style="width:35%">
+      <col style="width:5%">
+      <col style="width:15%">
+      <col style="width:5%">
+      <thead>
+        <tr>
+          <th>
+            Title
+          </th>
+          <th class="hidden-xs">
+            Sub title
+          </th>
+          <th class="hidden-xs">
+            Description
+          </th>
+          <th class="hidden-xs">
+            cost
+          </th>
+          <th class="hidden-xs">
+            image
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @projects.each do |project| %>
+          <tr data-item-id=<%= "#{project.id}" %> class="item">
+            <td>
+              <%= project.title %>
+            </td>
+            <td class="hidden-xs">
+              <%= project.sub_title %>
+            </td>
+            <td class="hidden-xs">
+              <%= simple_format project.description %>
+            </td>
+            <td class="hidden-xs">
+              <%= project.cost %>
+            </td>
+            <td class="hidden-xs">
+              <% unless project.avatar_url.nil? %>
+                <%= image_tag project.avatar_url, class: '', style: 'width: 100px' %>
               <% end %>
-              </td>
-              <!--
-              <td>
-                <%#= link_to 'show', thing_path(thing), :class => 'btn btn-default pull-right' %>
-                <%#= project.row_order %>
-              </td>
-              -->
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  <!-- </div> -->
+            </td>
+            <td>
+            <%= link_to "Edit Project", edit_admin_project_path(project), class: 'btn btn-primary' %>
+            <% if current_admin.god_mode? %>
+
+              <%= link_to "Delete Project", admin_project_path(project), method: 'delete', class: 'btn btn-danger' %>
+              <% if project.hidden %>
+                <%= link_to "UnHide Project", admin_hide_project_path(project), method: 'post', class: 'btn btn-warning' %>
+              <% else %>
+                <%= link_to "Hide Project", admin_hide_project_path(project), method: 'post', class: 'btn btn-warning' %>
+              <% end %>
+            <% else %>
+              <!-- regular admins can't be trusted to not-delete important things -->
+              <%= link_to "Delete Project", admin_hide_project_path(project), method: 'post', class: 'btn btn-danger' %>
+            <% end %>
+            </td>
+            <!--
+            <td>
+              <%#= link_to 'show', thing_path(thing), :class => 'btn btn-default pull-right' %>
+              <%#= project.row_order %>
+            </td>
+            -->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
