@@ -29,9 +29,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:ensemble]
 
-  get '/donors' => 'projects#index'
-
   resources :items, only: [:index]
+  get '/donate' => 'items#index', as: :donate
 
   # static pages
   get '/about' => 'home#about'
