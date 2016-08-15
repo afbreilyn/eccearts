@@ -8,6 +8,20 @@ body {
   margin-bottom: 80px;
 }
 
+a {
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid $blue;
+  margin-bottom: 2px;
+  color: $blue;
+}
+
 .project-show-row {
   padding-top: 50px;
 }
@@ -68,3 +82,4 @@ body {
 .p-b-60px {
   padding-bottom: 60px;
 }
+
