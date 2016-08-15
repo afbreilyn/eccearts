@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/admin' => 'admins#admin_home'
 
   resources :projects, only: [:index]
+  get '/our_season/' => 'projects#index', as: :our_season
 
 
   resources :users, only: [:ensemble]
