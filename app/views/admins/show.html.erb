@@ -1,34 +1,56 @@
 <div class="container">
+  <br />
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-      welcome to the admin portal <%= current_admin.name %>
+      <p class="inline">
+        welcome to the admin portal:
+      </p>
+      <h4 class="inline">
+        <%= current_admin.name %>
+      </h4>
     </div>
   </div>
+  <br />
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
       here are the things to do (thus far):
     </div>  
   </div>
-
+  <br />
   <div className="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12">
-      <ul>
-        <li>
-          <%= link_to "see all projects", admin_projects_path %>
-        </li>
-        <li>
-          <%= link_to "create a project", new_admin_project_path %>
-        </li>
-        <li>
-          <%= link_to "ensemble members", admin_ensemble_path %>
-        </li>
-        <li>
-          <%= link_to "add an ensemble member", new_admin_user_path %>
-        </li>
-        <li>
-          <%= link_to "item index", admin_items_path %>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <ul>
+            <li>
+              <%= link_to "see all projects", admin_projects_path, class: 'btn btn-primary' %>
+            </li>
+            <li>
+              <%= link_to "create a project", new_admin_project_path, class: 'btn btn-info' %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <ul>
+            <li>
+              <%= link_to "ensemble members", admin_ensemble_path, class: 'btn btn-primary' %>
+            </li>
+            <li>
+              <%= link_to "add an ensemble member", new_admin_user_path, class: 'btn btn-info' %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <ul>
+            <li>
+              <%= link_to "all donation items", admin_items_path, class: 'btn btn-primary' %>
+            </li>
+            <li>
+              <%= link_to "add an donation item", new_admin_item_path, class: 'btn btn-info' %>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

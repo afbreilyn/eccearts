@@ -8,18 +8,22 @@ body {
   margin-bottom: 80px;
 }
 
-a {
-  color: inherit;
-  border-bottom: 1px solid transparent;
-  margin-bottom: 2px;
-}
+// a {
+//   color: inherit;
+//   border-bottom: 1px solid transparent;
+//   margin-bottom: 2px;
+// }
 
-a:hover {
-  text-decoration: none;
-  color: inherit;
-  border-bottom: 1px solid $blue;
-  margin-bottom: 2px;
-  color: $blue;
+// a:hover {
+//   text-decoration: none;
+//   color: inherit;
+//   border-bottom: 1px solid $blue;
+//   margin-bottom: 2px;
+//   color: $blue;
+// }
+
+a.btn {
+  margin-bottom: 3px;
 }
 
 .project-show-row {
