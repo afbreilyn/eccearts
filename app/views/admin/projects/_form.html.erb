@@ -1,11 +1,21 @@
 
 <%= semantic_form_for [:admin, @project], :html => { :multipart => true } do |f| %>
-  <%= f.inputs %>
-    <div class="form-group">
-      <img id="img_prev" width=300 height=300 src="#" alt="your image" class="img-thumbnail hidden"/> <br/>
-      <%= f.hidden_field :avatar_cache %>
-    </div>
-  <%= f.actions %>
+  <%#= f.inputs %>
+
+  <%= f.input :title, :input_html => {class: 'form-control'} %>
+  <%= f.input :sub_title, :input_html => {class: 'form-control'} %>
+  <%= f.input :description, :input_html => {class: 'form-control'} %>
+  <%= f.input :avatar, :input_html => {class: 'form-control'} %>
+  <%#= f.input :title, :input_html => {class: 'form-control'} %>
+  <%#= f.input :title, :input_html => {class: 'form-control'} %>
+  <%#= f.input :title, :input_html => {class: 'form-control'} %>
+
+
+  <div class="form-group">
+    <img id="img_prev" width=300 height=300 src="#" alt="your image" class="img-thumbnail hidden"/> <br/>
+    <%= f.hidden_field :avatar_cache %>
+  </div>
+  <%= f.action :submit, :button_html => {class: "btn btn-submit"} %>
 <% end %>
 
 <script> 

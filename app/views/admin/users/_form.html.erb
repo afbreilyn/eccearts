@@ -1,12 +1,12 @@
 <%= semantic_form_for [:admin, @user] do |f| %>
   <%#= f.inputs do |f| %>
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :password %>
-    <%= f.input :bio %>
-    <%= f.hidden_field :ensemble_member, value: true %>
-    <%= f.input :role %>
-    <%= f.input :personal_website %>
+    <%= f.input :name, :input_html => {class: 'form-control'} %>
+    <%= f.input :email, :input_html => {class: 'form-control'} %>
+    <%= f.input :password, :input_html => {class: 'form-control'} %>
+    <%= f.input :bio, :input_html => {class: 'form-control'} %>
+    <%= f.hidden_field :ensemble_member, value: true, :input_html => {class: 'form-control'} %>
+    <%= f.input :role, :input_html => {class: 'form-control'} %>
+    <%= f.input :personal_website, :input_html => {class: 'form-control'} %>
 
   <%#= f.actions %>
   <%= f.action :submit, :button_html => {class: "btn btn-submit"} %>
