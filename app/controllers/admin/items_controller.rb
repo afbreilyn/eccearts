@@ -62,7 +62,9 @@ class Admin::ItemsController < Admin::BaseController
         :description,
         :donate_button,
         :item_id,
-        :row_order
+        :row_order,
+        :date,
+        :location
       )
     end
 end

@@ -1,12 +1,17 @@
-<div class="container">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0">
-    <div class="row text-center">
-      <h1> 
-        buy one of these
-      </h1>
+<div class="front-facing-page">
+  <div class="container">
+    <div class="col-xs-10 col-xs-offset-2 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+      <div class="row text-center">
+        <h1> 
+          Tickets and Packages
+        </h1>
+      </div>
+      <br />
+      <% @items.each do |item| %>
+        <%= render 'show', item: item %>
+        <br />
+        <br />
+      <% end %>
     </div>
-    <% @items.each do |item| %>
-      <%= render 'show', item: item %>
-    <% end %>
   </div>
 </div>

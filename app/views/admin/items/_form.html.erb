@@ -2,8 +2,12 @@
   <%#= f.inputs %>
 
   <%= f.input :title, :input_html => {class: 'form-control'} %>
+  <p> leave date empty if no specifc time </p>
+  <%= f.input :date, :input_html => {class: 'form-control'} %>
+  <%= f.input :location, :input_html => {class: 'form-control'} %>
+
   <%= f.input :description, :input_html => {class: 'form-control'} %>
   <%= f.input :donate_button, :input_html => {class: 'form-control'} %>
-
+  
   <%= f.action :submit, :button_html => {class: "btn btn-submit"} %>
 <% end %>
