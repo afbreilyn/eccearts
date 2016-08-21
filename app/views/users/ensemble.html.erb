@@ -1,14 +1,16 @@
-<br />
-<br />
-<div class="container p-b-60px">
+<div class="container p-b-60px background-white full-height">
+  <br />
+  <br />
   <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0">
     <div class="row text-center">
-      <h1> 
-        Get to know our ensemble
+      <h1>
+        <span class="blue-underline">
+          Get to know our ensemble
+        </span>
       </h1>
     </div>
     <% @admins.each do |admin| %>
-      <%= render 'ensemble_show', member: admin %>
+      <%#= render 'ensemble_show', member: admin %>
     <% end %>
     <% @members.each do |member| %>
       <%= render 'ensemble_show', member: member %>
