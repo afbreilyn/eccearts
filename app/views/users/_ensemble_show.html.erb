@@ -29,7 +29,7 @@
         </div>
         <div class="row bio-row">
           <p>
-            <%= simple_format member.bio %>
+            <%= simple_format member.bio.gsub(/\n/, '<br/>') %>
           </p>
         </div>
       </div>  
