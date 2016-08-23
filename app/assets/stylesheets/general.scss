@@ -5,6 +5,7 @@ html,body { height:100%; }
 
 body {
   background-color: $light-grey;
+  
   // margin-bottom: 80px;
 }
 
@@ -108,4 +109,16 @@ ul {
 .full-height {
   height: 100%;
   min-height: 100%;
+}
+
+.main-title {
+  font-size: 4em;
+}
+
+.orange-link {
+  color: $orange
+}
+
+.orange-link:hover {
+  color: $orange;
 }
