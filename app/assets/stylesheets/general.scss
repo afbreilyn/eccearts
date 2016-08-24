@@ -33,7 +33,11 @@ a.btn {
 
 .project-show-panel {
   background: white;
-  border: 1px solid $blue;
+  border-top: 1px dotted $blue;
+  border-left: none;
+  border-bottom: 1px dotted $blue;
+  border-right: none;
+
   border-radius: 2px;
   padding: 12px 15px;
   min-height: 200px
@@ -111,9 +115,9 @@ ul {
   min-height: 100%;
 }
 
-.main-title {
-  font-size: 4em;
-}
+// .main-title {
+//   font-size: 4em;
+// }
 
 .orange-link {
   color: $orange

@@ -6,7 +6,48 @@
 }
 
 .blue-underline {
-  border-bottom: 2px solid $blue;
+  // border-bottom: 2px solid $blue;
   // padding-bottom: 3px;
-  padding: 0 15px 0px 15px;
+  // padding: 0 15px 0px 15px;
+  // background-color: blue;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 97%,
+    $blue 3%,
+    $blue
+  );
+
+  background-position-y: -6px;
+
+  text-shadow:
+   -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white; 
+  
 }
+
+// .blue-underline-2 {
+//   // border-bottom: 2px solid $blue;
+//   // padding-bottom: 3px;
+//   // padding: 0 15px 0px 15px;
+//   // background-color: blue;
+
+//   background: linear-gradient(
+//     to bottom,
+//     transparent,
+//     transparent 97%,
+//     $blue 3%,
+//     $blue
+//   );
+
+//   background-position-y: -6px;
+
+//   text-shadow:
+//    -3px -2px 0 white,
+//    3px 1px 0 white,
+//    -3px -1px 0 white,
+//    3px -1px 0 white
+// }
