@@ -1,19 +1,21 @@
-<div class="container background-white">
-  <br />
-  <br />
-  <div class="col-xs-10 col-xs-offset-2 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-    <div class="row text-center">
-      <h1>
-        <span class="blue-underline">
+<div class="container background-white p-b-60px">
+  </br>
+  </br>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+      <h1 class="inline-block">
+        <span class="blue-underline"> 
           Tickets and Packages
         </span>
       </h1>
+      <br />
+      <br />
+      <br />
+      <% @items.each do |item| %>
+        <%= render 'show', item: item %>
+        <br />
+        <br />
+      <% end %>
     </div>
-    <br />
-    <% @items.each do |item| %>
-      <%= render 'show', item: item %>
-      <br />
-      <br />
-    <% end %>
   </div>
 </div>
