@@ -23,7 +23,7 @@
           <p class="inline">
             <% unless member.personal_website.blank? %>
               || 
-              <%= link_to "#{ member.name }'s website", member.personal_website, external: true, class: 'blue-link' %>
+              <%= link_to "#{ member.name }'s website", "http://#{member.personal_website}", class: 'blue-link', :target => "_blank" %>
             <% end %>
           </p>
         </div>
