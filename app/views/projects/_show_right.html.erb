@@ -3,7 +3,7 @@
     <div class="project-show-panel">
       <div class="row">
         <!-- hidden img for modile -->
-        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+        <div class="col-xs-6 col-xs-offset-3 hidden-sm hidden-md hidden-lg">
           <% unless project.avatar_url.nil? %>
             <%= image_tag project.avatar_url, class: 'project-img' %>
           <% end %>
