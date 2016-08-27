@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160820170522) do
+ActiveRecord::Schema.define(version: 20160827171804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,15 +53,16 @@ ActiveRecord::Schema.define(version: 20160820170522) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "title",       default: "",    null: false
+    t.string   "title",           default: "",    null: false
     t.string   "sub_title"
-    t.text     "description", default: "",    null: false
-    t.integer  "cost",        default: 0,     null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.text     "description",     default: "",    null: false
+    t.integer  "cost",            default: 0,     null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "avatar"
-    t.boolean  "hidden",      default: false
+    t.boolean  "hidden",          default: false
     t.integer  "row_order"
+    t.string   "eventbrite_link"
   end
 
   add_index "projects", ["title"], name: "index_projects_on_title", unique: true, using: :btree

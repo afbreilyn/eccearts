@@ -68,7 +68,8 @@ class Admin::ProjectsController < Admin::BaseController
         :remove_avatar,
         :hidden,
         :row_order,
-        :project_id
+        :project_id,
+        :eventbrite_link
       )
     end
 

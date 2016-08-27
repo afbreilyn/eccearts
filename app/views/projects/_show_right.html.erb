@@ -27,6 +27,16 @@
               </h3>
             </div>
           </div>
+          <!-- buy eventbrite tix -->
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-12 col-lg-12 text-center-xs">
+              <p class="inline">
+                <% unless project.eventbrite_link.blank? %>
+                  <%= link_to "Purchase Tickets", project.eventbrite_link, class: 'blue-link', :target => "_blank" %>
+                <% end %>
+              </p>
+            </div>
+          </div>
           <!-- description -->
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center-xs">
