@@ -34,9 +34,9 @@ Rails.application.routes.draw do
 
   # static pages
   get '/about' => 'home#about'
-  get '/community'=> 'home#community'
-  get '/ensemble'=> 'users#ensemble'
-
+  get '/community' => 'home#community'
+  get '/ensemble' => 'users#ensemble'
+  get '/media' => 'home#media'
 
   root 'home#index'
 

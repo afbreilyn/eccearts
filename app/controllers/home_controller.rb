@@ -7,5 +7,8 @@ class HomeController < ApplicationController
 
   def community
   end
+
+  def media
+  end
   
 end
