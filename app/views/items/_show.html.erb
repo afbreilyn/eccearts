@@ -46,11 +46,23 @@
         </div>
       </div>
     </div>
+    <br />
     <div class="row">
       <div class="col-xs-10 col-xs-offset-2">
         <div class="row">
           <div class="item-left-padding">
-            <%= simple_format item.donate_button %>
+            <p class="bold" style="margin-bottom: 10px;">
+              <%= item.price_line %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-2">
+        <div class="row">
+          <div class="item-left-padding">
+            <%= item.donate_button.html_safe %>
           </div>
         </div>
       </div>

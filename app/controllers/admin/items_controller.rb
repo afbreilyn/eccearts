@@ -64,7 +64,8 @@ class Admin::ItemsController < Admin::BaseController
         :item_id,
         :row_order,
         :date,
-        :location
+        :location,
+        :price_line
       )
     end
 end

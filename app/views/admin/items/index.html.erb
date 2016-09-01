@@ -51,7 +51,7 @@
             <%= simple_format item.description %>
           </td>
           <td class="">
-            <%= simple_format item.donate_button %>
+            <%= item.donate_button.html_safe  %>
           </td>
           <td>
             <%= link_to "Edit Project", edit_admin_item_path(item), class: 'btn btn-primary' %>
