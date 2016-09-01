@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index]
   get '/donate' => 'items#index', as: :donate
+  get '/contribute' => 'items#index', as: :contribute
 
   # static pages
   get '/about' => 'home#about'
