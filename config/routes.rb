@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   get '/community' => 'home#community'
   get '/ensemble' => 'users#ensemble'
   get '/media' => 'home#media'
+  get '/press' => 'home#press'
+  get 'home/download_pdf' => 'home#download_pdf'
+
 
   root 'home#index'
 
