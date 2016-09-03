@@ -26,8 +26,8 @@ class HomeController < ApplicationController
     # )
 
     send_file(
-      Rails.root.join('public', 'test.pdf'),
-      :type=>"application/pdf",
+      Rails.root.join('public', 'Ecce-Press-Packet.zip'),
+      :type=>"application/zip",
       :x_sendfile=>true,
       :disposition => 'attachment'
     )
