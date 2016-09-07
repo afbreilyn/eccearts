@@ -25,6 +25,8 @@ gem 'cloudinary'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
 
+gem 'Bootstrap-Image-Gallery-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'

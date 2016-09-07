@@ -11,19 +11,13 @@ class HomeController < ApplicationController
   def media
   end
   
+  def photos
+  end
+
   def press
   end
 
   def download_pdf
-
-    # debugger
-
-    # send_file(
-    #   "#{Rails.root}/public/test.pdf",
-    #   filename: "test.pdf",
-    #   type: "application/pdf",
-    #   :x_sendfile=>true
-    # )
 
     send_file(
       Rails.root.join('public', 'Ecce-Press-Packet.zip'),
