@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :items do
       post :update_row_order, on: :collection
     end
+    resources :categories, only: [:new, :create, :destory, :index]
   end
 
   devise_for :admins, path: 'admins', skip: :registrations
@@ -37,7 +38,8 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
   get '/community' => 'home#community'
   get '/ensemble' => 'users#ensemble'
-  get '/media' => 'home#media'
+  get '/videos' => 'home#videos'
+  get '/photos' => 'home#photos'
   get '/press' => 'home#press'
   get 'home/download_pdf' => 'home#download_pdf'
 
