@@ -134,3 +134,12 @@ ul {
 .underline {
   border-bottom: 1px solid $black;
 }
+
+
+
+/* --- over writes --- */
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  margin: auto;
+}
+
