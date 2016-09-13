@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       post :update_row_order, on: :collection
     end
     resources :categories, only: [:new, :create, :destory, :index]
+    resources :photos
   end
 
   devise_for :admins, path: 'admins', skip: :registrations
