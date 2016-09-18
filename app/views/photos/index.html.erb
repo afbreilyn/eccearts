@@ -1,0 +1,28 @@
+<div class="container background-white p-b-60px">
+  </br>
+  </br>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+      <h1 class="inline-block">
+        <span class="blue-underline"> 
+          Photos of Performances and Events
+        </span>
+      </h1>
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+      <% @photos.each do |photo_group| %>
+        <%= render 'show', photo_group: photo_group %>
+        <br />
+        <br />
+        <br />
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

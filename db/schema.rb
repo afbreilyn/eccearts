@@ -60,9 +60,10 @@ ActiveRecord::Schema.define(version: 20160913014241) do
     t.string   "price_line",    default: ""
   end
 
-  create_table "pictures", force: :cascade do |t|
-    t.string   "avatar"
+  create_table "photos", force: :cascade do |t|
+    t.string   "avatar",      null: false
     t.integer  "category_id"
+    t.string   "title"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

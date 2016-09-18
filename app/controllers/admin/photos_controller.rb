@@ -16,7 +16,7 @@ class Admin::PhotosController < Admin::BaseController
   end
 
   def index
-    @photos = Photo.all
+    @photos = Photo.group(:category_id, :id)
   end
 
   def edit
@@ -45,8 +45,9 @@ class Admin::PhotosController < Admin::BaseController
 
     def photo_params
       params.require(:photo).permit(
-        :avatar_url,
-        :category_id
+        :avatar,
+        :category_id,
+        :title
       )
     end
 end

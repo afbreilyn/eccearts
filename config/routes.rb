@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   resources :projects, only: [:index]
   get '/our_season/' => 'projects#index', as: :our_season
 
+  resources :photos, only: [:index]
 
   resources :users, only: [:ensemble]
 
@@ -40,7 +41,6 @@ Rails.application.routes.draw do
   get '/community' => 'home#community'
   get '/ensemble' => 'users#ensemble'
   get '/videos' => 'home#videos'
-  get '/photos' => 'home#photos'
   get '/press' => 'home#press'
   get 'home/download_pdf' => 'home#download_pdf'
 
