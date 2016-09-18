@@ -10,9 +10,6 @@ class HomeController < ApplicationController
 
   def videos
   end
-  
-  def photos
-  end
 
   def press
   end
