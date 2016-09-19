@@ -1,0 +1,19 @@
+<div class="container p-b-60px">
+  <div class="row">
+    photo list
+  </div>
+  <% @photos.each do |photo| %>
+    <%#= render 'photo_show', photo: photo %>
+    <div class="row">
+      <%#= photo.avatar_url %>
+      <div class="col-sm-3">
+        <%= image_tag photo.avatar_url, class: 'photo-img' %>
+        ||
+        <%= photo.category_id %>
+      </div>
+      <div class="col-sm-6">
+        <%= link_to "Delete Photo", admin_photo_path(photo), method: 'post', class: 'btn btn-danger' %>
+      </div>
+    </div>
+  <% end %>
+</div>
