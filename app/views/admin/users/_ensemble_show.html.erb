@@ -28,7 +28,7 @@
       </div>
       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
         <% unless member.avatar_url.nil? %>
-          <%= image_tag member.avatar_url, class: '', style: 'width: 100px' %>
+          <%= image_tag member.avatar_url(:standard), class: '', style: 'width: 100px' %>
         <% end %>
       </div>
     </div>
