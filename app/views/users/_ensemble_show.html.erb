@@ -6,7 +6,7 @@
           <% if member.avatar_url.nil? %>
             <%= image_tag asset_path("Official-ECCE-Logo.jpg"), class: 'ensemble-img' %>
           <% else %>
-            <%= image_tag member.avatar_url, class: 'ensemble-img' %>
+            <%= image_tag member.avatar_url(:standard), class: 'ensemble-img' %>
           <% end %>
         </div>
       </div>

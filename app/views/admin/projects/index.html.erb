@@ -64,7 +64,7 @@
             </td>
             <td class="hidden-xs">
               <% unless project.avatar_url.nil? %>
-                <%= image_tag project.avatar_url, class: '', style: 'width: 100px' %>
+                <%= image_tag project.avatar_url(:standard), class: '', style: 'width: 100px' %>
               <% end %>
             </td>
             <td>
