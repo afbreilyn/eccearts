@@ -23,9 +23,6 @@ class HomeController < ApplicationController
     )
   end
 
-  def co_incide
-  end
-
   def etchings
   end
 

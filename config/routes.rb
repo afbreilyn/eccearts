@@ -44,9 +44,7 @@ Rails.application.routes.draw do
   get '/press' => 'home#press'
   get 'home/download_pdf' => 'home#download_pdf'
 
-  get 'co_incide' => 'home#co_incide'
   get 'etchings' => 'home#etchings'
-
 
   root 'home#index'
 
