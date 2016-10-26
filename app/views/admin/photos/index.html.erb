@@ -7,9 +7,9 @@
     <div class="row">
       <%#= photo.avatar_url %>
       <div class="col-sm-3">
-        <%= image_tag photo.avatar_url, class: 'photo-img' %>
+        <%= image_tag photo.avatar_url(:standard2), class: 'photo-img' %>
         ||
-        <%= photo.category_id %>
+        <%= Category.where(id: photo.category_id).name %>
       </div>
       <div class="col-sm-6">
         <%= link_to "Delete Photo", admin_photo_path(photo), method: 'delete', class: 'btn btn-danger' %>

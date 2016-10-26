@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-5">
           <% unless project.avatar_url.nil? %>
-            <%= image_tag project.avatar_url, class: 'project-img' %>
+            <%= image_tag project.avatar_url(:project), class: 'project-img' %>
           <% end %>
         </div>
         <div class="col-xs-12 col-sm-8 col-sm-offset-0 col-md-8 col-lg-7">
