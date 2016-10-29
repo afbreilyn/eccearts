@@ -23,4 +23,7 @@ class HomeController < ApplicationController
     )
   end
 
+  def etchings
+  end
+
 end
