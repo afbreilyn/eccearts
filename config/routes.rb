@@ -2,22 +2,22 @@ Rails.application.routes.draw do
   devise_for :users
   # devise_for :admins
   namespace :admin do
-    resources :projects, except: [:show]
-    post '/projects/hide-project/:id' => 'projects#hide_project', as: :hide_project
-    resources :projects do
-      post :update_row_order, on: :collection
-    end
-    resources :users, except: [:show]
-    get '/ensemble-members' => 'users#ensemble', as: :ensemble
-    post '/users/hide-ensemble-memeber/:id' => 'users#hide_ensemble_member', as: :hide_ensemble_member
+        resources :projects, except: [:show]
+        post '/projects/hide-project/:id' => 'projects#hide_project', as: :hide_project
+        resources :projects do
+              post :update_row_order, on: :collection
+        end
+        resources :users, except: [:show]
+        get '/ensemble-members' => 'users#ensemble', as: :ensemble
+        post '/users/hide-ensemble-memeber/:id' => 'users#hide_ensemble_member', as: :hide_ensemble_member
 
-    resources :items, except: [:show]
-    post '/itmes/hide-item/:id' => 'items#hide_item', as: :hide_item
-    resources :items do
-      post :update_row_order, on: :collection
-    end
-    resources :categories, only: [:new, :create, :destory, :index]
-    resources :photos
+        resources :items, except: [:show]
+        post '/itmes/hide-item/:id' => 'items#hide_item', as: :hide_item
+        resources :items do
+              post :update_row_order, on: :collection
+        end
+        resources :categories, only: [:new, :create, :destory, :index]
+        resources :photos
   end
 
   devise_for :admins, path: 'admins', skip: :registrations

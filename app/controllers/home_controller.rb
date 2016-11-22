@@ -16,7 +16,7 @@ class HomeController < ApplicationController
 
   def download_pdf
     send_file(
-      Rails.root.join('public', 'Ecce-Press-Packet.zip'),
+      Rails.root.join('public', 'ECCE_Press_Package.zip'),
       :type=>"application/zip",
       :x_sendfile=>true,
       :disposition => 'attachment'
