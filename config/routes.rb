@@ -44,8 +44,11 @@ Rails.application.routes.draw do
   get '/videos' => 'home#videos'
   get '/press' => 'home#press'
   get 'home/download_pdf' => 'home#download_pdf'
+  get 'home/download_retrospective' => 'home#download_retrospective'
 
   get 'etchings' => 'home#etchings'
-
+  get 'etchings_pics' => 'home#etchings_pics'
+  get 'etchings_2017' => 'home#etchings_2017'
+  
   root 'home#index'
 end
