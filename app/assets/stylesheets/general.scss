@@ -133,7 +133,16 @@ ul {
   border-bottom: 1px solid $black;
 }
 
-
+.std-etchings-pic {
+  padding: 10px;
+  background: #F1F1F1;
+  margin-bottom: 15px;
+  line-height: 250px;
+  img {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
 
 /* --- over writes --- */
 
@@ -141,4 +150,3 @@ ul {
   margin: auto;
   height: 450px;
 }
-
