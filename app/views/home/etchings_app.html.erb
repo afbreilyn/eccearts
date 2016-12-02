@@ -16,52 +16,96 @@
 
         </p>
       </div>
+      <br />
+
       <div class="row">
-        Download the shit
-      </div>
-      <div class="row">
-        <p>
+        <h3>
           Email your application along with the following materials to  _______________ :
-        </p>
+        </h3>
       </div>
       <div class="row">
-        <ul>
-          <li>
-            Two scores representing your best work for any instrumentation (PDF)
-          </li>
-          <li>
-            Recordings of these works (optional) (MP3)
-          </li>
-          <li>
-            Curriculum Vitae (PDF, DOC)
-          </li>
-          <li>
-            Short bio
-          </li>
-          <li>
-            In lieu of uploading scores and/or MP3s along with your application, you may provide links to your scores and recordings but these links must remain active until February 3rd. Please no links to downloads.
-          </li>
-        </ul>
+        <div style="margin-left: 15px">
+          <ul>
+            <li>
+              - One score representing your best work for any instrumentation (PDF)
+            </li>
+            <li>
+              - Recordings of these works (optional) (MP3)
+            </li>
+            <li>
+              - Curriculum Vitae (PDF, DOC)
+            </li>
+            <li>
+              - Short bio
+            </li>
+            <li>
+              - In lieu of uploading scores and/or MP3s along with your application, you may provide links to your scores and recordings but these links must remain active until February 3rd. Please no links to downloads.
+            </li>
+          </ul>
+        </div>
       </div>
+      <br />
+      <div class="row">
+          <p>
+            Download your applications here:
+          </p>
+          <ul>
+            <li>
+              <%= link_to 'Dance Program', home_download_dance_app_url, data: { turbolinks: false } %>
+            </li>
+            <li>
+              <%= link_to 'Composition Program', home_download_composition_app_url, data: { turbolinks: false } %>
+            </li>
+            <li>
+              <%= link_to 'Collaboration Program', home_download_collaboration_app_url, data: { turbolinks: false } %>
+            </li>
+          </ul>
+      </div>
+
       <div class="row">
         <p>
           Be sure to submit your application fee ($40 before January 28th, $50 between January 28th and February 3rd 
         </p>
       </div>
+      <br />
       <div class="row">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="3CKZRU3LSF7HA">
-          <table>
-          <tr><td><input type="hidden" name="on0" value="Application options:">Application options:</td></tr><tr><td><select name="os0">
-              <option value="Early App (until Jan 28th)">Early App (until Jan 28th) $40.00 USD</option>
-              <option value="From Jan 29 to Feb 5th">From Jan 29 to Feb 5th $50.00 USD</option>
-          </select> </td></tr>
-          </table>
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        <div class="col-xs-6">
+          <p style="margin-bottom: 5px;">
+            Composer Application Fee
+          </p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="3CKZRU3LSF7HA">
+            <table>
+            <tr><td><input type="hidden" name="on0" value="Application options:"><!-- Application options: --></td></tr><tr><td><select name="os0">
+                <option value="Early App (until Jan 28th)">Early App (until Jan 28th) $40.00 USD</option>
+                <option value="From Jan 29 to Feb 5th">From Jan 29 to Feb 5th $50.00 USD</option>
+            </select> </td></tr>
+            </table>
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
           </form>
+        </div>
+        <div class="col-xs-6">
+          <p style="margin-bottom: 5px;">
+            Performance Artist's Application Fee:
+          </p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="F3N49LADY87VS">
+            <table>
+            <tr><td><input type="hidden" name="on0" value="Pay Application Fee"><!-- Pay Application Fee --></td></tr><tr><td><select name="os0">
+                <option value="Early Application (until January 28th)">Early Application (until January 28th) $40.00 USD</option>
+                <option value="From January 29 to February 5th">From January 29 to February 5th $50.00 USD</option>
+            </select> </td></tr>
+            </table>
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+
+        </div>
       </div>
 
     </div>

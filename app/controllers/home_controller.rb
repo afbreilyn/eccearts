@@ -53,4 +53,32 @@ class HomeController < ApplicationController
   def etchings_app
   end
 
+
+  def download_dance_app
+    send_file(
+      Rails.root.join('public', 'Etchings_Dance_Program_Pages.docx'),
+      :type=>"application/docx",
+      :x_sendfile=>true,
+      :disposition => 'attachment'
+    )
+  end
+
+  def download_composition_app
+    send_file(
+      Rails.root.join('public', 'Etchings-2017-Application-Form.docx'),
+      :type=>"application/docx",
+      :x_sendfile=>true,
+      :disposition => 'attachment'
+    )
+  end
+
+  def download_collaboration_app
+    send_file(
+      Rails.root.join('public', 'Etchings-2017-Body Movement-Application-Form.docx'),
+      :type=>"application/docx",
+      :x_sendfile=>true,
+      :disposition => 'attachment'
+    )
+  end
+
 end

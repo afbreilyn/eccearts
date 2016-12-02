@@ -45,6 +45,10 @@ Rails.application.routes.draw do
   get '/press' => 'home#press'
   get 'home/download_pdf' => 'home#download_pdf'
   get 'home/download_retrospective' => 'home#download_retrospective'
+  get 'home/download_dance_app' => 'home#download_dance_app'
+  get 'home/download_composition_app' => 'home#download_composition_app'
+  get 'home/download_collaboration_app' => 'home#download_collaboration_app'
+
 
   get 'etchings' => 'home#etchings'
   get 'etchings_pics' => 'home#etchings_pics'
