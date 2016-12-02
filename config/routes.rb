@@ -49,6 +49,8 @@ Rails.application.routes.draw do
   get 'etchings' => 'home#etchings'
   get 'etchings_pics' => 'home#etchings_pics'
   get 'etchings_2017' => 'home#etchings_2017'
+  get 'etchings_composers_faculty' => 'home#etchings_composers_faculty'
+  get 'etchings_dancers_faculty' => 'home#etchings_dancers_faculty'
   
   root 'home#index'
 end

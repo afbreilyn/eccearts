@@ -41,4 +41,10 @@ class HomeController < ApplicationController
   def etchings_2017
   end
 
+  def etchings_composers_faculty
+  end
+
+  def etchings_dancers_faculty
+  end
+
 end
