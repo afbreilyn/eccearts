@@ -137,10 +137,12 @@ ul {
   padding: 10px;
   background: #F1F1F1;
   margin-bottom: 15px;
-  line-height: 250px;
+  line-height: 200px;
+  height: 260px;
   img {
     width: 100%;
     margin-bottom: 5px;
+    max-height: 191px;
   }
 }
 

@@ -47,4 +47,10 @@ class HomeController < ApplicationController
   def etchings_dancers_faculty
   end
 
+  def etchings_ensemble
+  end
+
+  def etchings_app
+  end
+
 end
