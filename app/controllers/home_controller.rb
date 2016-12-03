@@ -81,4 +81,10 @@ class HomeController < ApplicationController
     )
   end
 
+  def etchings_body_movement_info
+  end
+
+  def etchings_composition_info
+  end  
+
 end

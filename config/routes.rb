@@ -58,5 +58,9 @@ Rails.application.routes.draw do
   get 'etchings_ensemble' => 'home#etchings_ensemble'
   get 'etchings_app' => 'home#etchings_app'
 
+  get 'etchings_composition_info' => 'home#etchings_composition_info'
+  get 'etchings_body_movement_info' => 'home#etchings_body_movement_info'
+
+
   root 'home#index'
 end
