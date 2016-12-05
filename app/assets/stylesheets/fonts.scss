@@ -30,14 +30,20 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Open-Sans';
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Open-Sans';
+  // font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 h5, p { 
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
   font-weight: 400;
+  // font-family: 'Montserrat', sans-serif;
 }
 
 /* Type will scale with modules */
