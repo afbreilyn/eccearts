@@ -87,4 +87,7 @@ class HomeController < ApplicationController
   def etchings_composition_info
   end  
 
+  def holiday_campaign
+  end
+
 end
