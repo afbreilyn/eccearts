@@ -90,4 +90,8 @@ class HomeController < ApplicationController
   def holiday_campaign
   end
 
+  def fundraising_campaign
+  end
+
+
 end

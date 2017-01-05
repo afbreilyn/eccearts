@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   get 'home/download_composition_app' => 'home#download_composition_app'
   get 'home/download_collaboration_app' => 'home#download_collaboration_app'
   get '/holiday_campaign' => 'home#holiday_campaign'
+  get '/fundraising_campaign' => 'home#fundraising_campaign'
 
   get 'etchings' => 'home#etchings'
   get 'etchings_pics' => 'home#etchings_pics'
